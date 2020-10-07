@@ -250,6 +250,8 @@ export default {
       }
       if (this.isOpen) {
         return this.close(true)
+      } else if (!this.isInline) {
+        this.$emit("opened");
       }
       this.setInitialView()
     },
